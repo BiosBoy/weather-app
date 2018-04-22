@@ -1,28 +1,42 @@
-.App {
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-layout > h1 {
+  width: 70%;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.form {
+  width: 82%;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.form > h2 {
+  font-weight: normal;
+  font-size: 17px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.weather-item, .weather-item_img {
+  display: flex;
 }
 
-.App-intro {
-  font-size: large;
+.weather-item_temperature, .weather-item_status {
+  margin-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.weather-item_temperature, .weather-item_status p {
+  text-align: center;
+  font-weight: normal;
+}
+
+.weather-item_temperature, .weather-item_status, .weather-item_situation span {
+  font-weight: bold;
+}
+
+.weather-item_temperature p {
+  font-weight: normal;
 }
