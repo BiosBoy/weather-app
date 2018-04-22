@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import reducers from './reducers'
 
 let store = createStore(reducers); 
-console.log(store.getState());
 
 ReactDOM.render(
     <Provider store={store}>

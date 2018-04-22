@@ -17,7 +17,7 @@ class Form extends Component {
     render() {
         return (
             <div className="form">
-                <h2>Type the name of the city: </h2>
+                <h2>Type the name of the city: ("London" for example) </h2>
                 <form onSubmit={this.getWeather} className="weather-form">
                     <input type="text" name="city" placeholder="City..." required/>
                     <input type="submit" value="GetWeather!" required/>

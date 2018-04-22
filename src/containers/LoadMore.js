@@ -4,7 +4,7 @@ import { moreWeather } from '../actions'
 import loadMoreComponent from '../components/loadMore'
 
 const mapStateToProps = state => (console.log('loadMoreComponent', state), {
-    state: state.weather
+    state: state
 });
 
 const mapDispatchToProps = dispatch => ({
