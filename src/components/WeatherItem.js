@@ -8,12 +8,21 @@ class WeatherItem extends Component {
     render() {
         return (
             <Fragment>
+                {this.props.date === '' ? '' 
+                : <div className="weather-item_date">
+                    <hr/>
+                    <span>Date: </span><p>{this.props.date}</p>
+                </div>
+                }
                 <div className="weather-item" key={this.props.params.key}>
+                    <div className="weather-item_time">
+                        <span>Time: </span><p>{this.props.time}</p>
+                    </div>
                     <div className="weather-item_temperature">
                         <span>Local temperature: </span><p>{this.props.params.main.temp.toFixed(0)} °</p>
                     </div>
                     <div className="weather-item_status">
-                        <span>Local status: </span><p>{this.props.params.weather[0].main}</p>
+                        <span>Sky status: </span><p>{this.props.params.weather[0].main}</p>
                     </div>
                     <div className="weather-item_situation">
                         <span>Street situation: </span>

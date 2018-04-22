@@ -8,5 +8,5 @@ export const addWeather = (cityName, cityWeather) => ({
 
 export const moreWeather = (loadMore) => ({
     type: types.LOAD_MORE,
-    loadMore,
+    loadMore
 });

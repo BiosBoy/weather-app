@@ -10,9 +10,20 @@ class WeatherItem extends Component {
         this.props.moreWeather(this.props.state.loadMore + 5);
     }
 
+    componentDidMount() {
+        if (this.props.state.loadMore === 5) {
+            this.myRef.current.style.display = 'none';
+        }
+    }
+
     componentDidUpdate() {
-        if (this.props.state.loadMore === this.props.state.weather.length) {
-            this.myRef.current.remove();
+        if (this.props.state.loadMore !== 0) {
+            this.myRef.current.style.display = 'flex';
+            this.myRef.current.style.justifyContent = 'center';
+        }
+        if (this.props.state.loadMore >= this.props.state.weather.length) {
+            console.log(this.props.state.loadMore, this.props.state.weather.length)
+            this.myRef.current.style.display = 'none';
         }
     }
 
